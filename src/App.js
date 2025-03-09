@@ -12,8 +12,20 @@ function App() {
         <h2> {score}</h2>
 
         {/* update the score state */}
-        <button onClick={() => setScore(score + 1)}>
+        <button
+          onClick={() => setScore((prevScore) => prevScore - 1)}
+        >
+          Decrease score
+        </button>
+        <button
+          onClick={() => setScore((prevScore) => prevScore + 1)}
+        >
           Increase score
+        </button>
+        <button
+          onClick={() => setScore(0)}
+        >
+          Reset score
         </button>
       </header>
     </div>
