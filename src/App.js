@@ -1,14 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Welcome!</h1>
-      </header>
-    </div>
-  );
+  const [score, setScore] = useState(0); // [0, ƒ]
+
+  return <h1>{score}</h1>;
 }
 
 export default App;
