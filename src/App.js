@@ -7,8 +7,9 @@ function App() {
 
   // The effect happens after the render
   useEffect(() => {
-    console.log('useEffect called!');
-  });
+    // console.log('useEffect called!');
+    document.title = `${message}. Your score is ${score}`;
+  }, [message, score]); // add dependencies
 
   return (
     <div className="App">
